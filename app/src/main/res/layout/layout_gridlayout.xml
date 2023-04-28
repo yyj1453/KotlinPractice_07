@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button android:text="A"/>
+        <Button android:text="B"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+    </GridLayout>
+    <!--수평 그리드 레이아웃 생성, 열 개수는 3개-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <Button android:text="A"/>
+        <Button android:text="B"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+    </GridLayout>
+    <!--수직 그리드 레이아웃 생성, 행 개수는 3개-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:rowCount="3">
+        <Button android:text="A"/>
+        <Button android:text="B"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+    </GridLayout>
+    <!--수평 그리드 레이아웃 생성, 열 개수는 3개, C버튼의 위치를 가로세로 한칸씩(그에 맞게 다른버튼들도 이동-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <Button android:text="A"/>
+        <Button android:text="B"/>
+        <Button android:text="C"
+            android:layout_row="1"
+            android:layout_column="1"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+    </GridLayout>
+    <!--수평 그리드 레이아웃 생성, 열 개수는 3개, B버튼이 커져서 B버튼 아래에 있는 E버튼의 칸도 커짐(그리드레이아웃은 표형태로 나타냄)-->
+    <!--E버튼의 칸만 커졌으므로 여백이 형성 -> layout_gravity속성으로 여백을 채움-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <Button android:text="A"/>
+        <Button android:text="HELLOWORLD HELLOWORLD"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"
+            android:layout_gravity="fill_horizontal"/>
+        <Button android:text="F"/>
+    </GridLayout>
+    <!--수평 그리드 레이아웃 생성, 열 개수는 3개, F버튼의 위치를 가로세로 1칸으로 설정 -> E버튼과 겹쳐짐 -> 그래비티를 오른쪽으로 줌-->
+    <!--E버튼 칸의 오른쪽에 생성-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <Button android:text="A"/>
+        <Button android:text="HELLOWORLD HELLOWORLD"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+        <Button android:text="F"
+            android:layout_row="1"
+            android:layout_column="1"
+            android:layout_gravity="right"/>
+    </GridLayout>
+    <!--수평 그리드 레이아웃 생성, 열 개수는 3개-->
+    <!--A버튼의 칸을 가로 세로 2칸씩 병합 -> 그래비티 속성을 이용해 칸을 채움-->
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:columnCount="3">
+        <Button android:text="A"
+            android:layout_columnSpan="2"
+            android:layout_rowSpan="2"
+            android:layout_gravity="fill"/>
+        <Button android:text="B"/>
+        <Button android:text="C"/>
+        <Button android:text="D"/>
+        <Button android:text="E"/>
+        <Button android:text="F"/>
+    </GridLayout>
+</LinearLayout>

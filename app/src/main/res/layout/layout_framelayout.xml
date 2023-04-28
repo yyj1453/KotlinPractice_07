@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--프레임 레이아웃은 뷰 들을 겹치게 쌓듯이 생성, xml에 작성된 순서로 보여짐-->
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="BUTTON1"/>
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@mipmap/ic_launcher"/>
+
+</FrameLayout>
